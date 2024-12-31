@@ -8,6 +8,7 @@ from sqlalchemy import (
     UUID,
     func,
     Boolean,
+    DATE
 )
 from datetime import datetime
 from uuid import uuid4
@@ -41,5 +42,7 @@ class TimeLog(Base):
     id = Column(Integer, primary_key=True, index=True, autoincrement=True, unique=True)
     user_id = Column(ForeignKey("users.id"), nullable=False)
     event_added = Column(DateTime, default=func.now())
+    date = Column(DATE, default=datetime.now().date())
     short_desc = Column(String(64))
     comment = Column(String(1024))
+

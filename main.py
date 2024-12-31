@@ -18,8 +18,8 @@ def startup_tasks():
 
 app = FastAPI()
 
-if os.getenv("DEBUG").lower() in ("True", "true"):
-    app.add_event_handler("startup", startup_tasks)
+if os.getenv("DEBUG") == "True":
+    pass
 
 origins = [
     "http://localhost:3000",
