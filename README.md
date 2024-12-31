@@ -1,4 +1,4 @@
-# Workday Tracker
+# Workday Tracker API
 
 >[!CAUTION]
 >This repo is work in progress and not yet stable.
@@ -20,7 +20,15 @@ The Workday Tracker API is built using FastAPI and provides endpoints for user a
 
 ### Worklog
 
+- **POST /worklog/start-workday**: Start the workday.
 - **POST /worklog/pause**: Pause the worklog.
+- **POST /worklog/resume**: Resume the worklog.
+- **POST /worklog/end-workday**: End the workday.
+- **POST /worklog/comment**: Add a comment to the worklog.
+- **GET /worklog/get-timelog**: Retrieve the user's timelog.
+- **GET /worklog/get-timelog-by-date**: Retrieve the user's timelog for a specific date.
+- **GET /worklog/worked-time**: Retrieve the total worked time.
+- **GET /worklog/worked-time/csv**: Retrieve the total worked time as a CSV file.
 
 ## Setup
 

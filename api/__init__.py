@@ -32,7 +32,6 @@ def verify_token(token: str):
 
 
 def get_token_content(token):
-
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-    print(payload)
+
     return payload

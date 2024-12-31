@@ -8,7 +8,7 @@ from sqlalchemy import (
     UUID,
     func,
     Boolean,
-    DATE
+    DATE,
 )
 from datetime import datetime
 from uuid import uuid4
@@ -45,4 +45,3 @@ class TimeLog(Base):
     date = Column(DATE, default=datetime.now().date())
     short_desc = Column(String(64))
     comment = Column(String(1024))
-
